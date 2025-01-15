@@ -1,0 +1,12 @@
+[Unit]
+Description=Discord Updater Timer
+Requires=graphical-session.target
+After=graphical-session.target default.target network.target network-online.target systemd-networkd.service
+Wants=network-online.target
+
+[Timer]
+OnStartupSec=10s
+Unit=discord-updater.service
+
+[Install]
+WantedBy=graphical-session.target
