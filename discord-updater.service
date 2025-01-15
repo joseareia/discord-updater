@@ -1,0 +1,13 @@
+[Unit]
+Description=Discord Updater Service
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/discord-updater
+Restart=on-failure
+Environment="DISPLAY=:0"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus"
+
+[Install]
+WantedBy=default.target
