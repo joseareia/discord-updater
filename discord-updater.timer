@@ -5,7 +5,8 @@ After=graphical-session.target default.target network.target network-online.targ
 Wants=network-online.target
 
 [Timer]
-OnStartupSec=10s
+OnStartupSec=15s
+OnUnitActiveSec=1d
 Unit=discord-updater.service
 
 [Install]
