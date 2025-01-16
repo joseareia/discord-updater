@@ -1,7 +1,7 @@
 # Discord Updater
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg?color=green)](https://www.lua.org/)
 [![GitHub license](https://img.shields.io/badge/License-GPL_3.0-green.svg)](https://www.gnu.org/licenses/gpl-3.0.html#license-text)
-[![Release](https://img.shields.io/badge/Release-v1.0.0-green.svg)](https://github.com/joseareia/discord-updater/releases)
+[![Release](https://img.shields.io/badge/Release-v1.1.0-green.svg)](https://github.com/joseareia/discord-updater/releases)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg)](https://github.com/joseareia/discord-updater/graphs/commit-activity)
 
 An auto-updater script for Discord with Systemd Service and Timer integration for seamless, automatic updates.
