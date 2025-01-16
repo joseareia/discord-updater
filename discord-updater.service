@@ -4,8 +4,7 @@ After=default.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/discord-updater
-Restart=on-failure
+ExecStart=HOMEPATH/.discord-updater/bin/discord-version-checker
 Environment="DISPLAY=:0"
 Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus"
 
