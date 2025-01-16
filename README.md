@@ -25,10 +25,10 @@ sudo apt install curl jq make libnotify-bin
 
 Follow these steps to install and configure the utility:
 
-#### Download the Latest Release
+#### 1. Download the Latest Release
 Visit the [releases page](https://github.com/joseareia/discord-updater/releases) to download the most recent version of the utility.
 
-#### Update Your `$PATH`
+#### 2. Update Your `$PATH`
 Add the installation directory to your `$PATH` by running the following commands in your terminal:
 
 ```bash
@@ -36,28 +36,28 @@ echo 'export PATH="$HOME/.discord-updater/bin/:$PATH"' >> $HOME/.bashrc
 source $HOME/.bashrc
 ```
 
-#### System Configuration
+#### 3. System Configuration
 Configure your system and set up a policy to request a password each time there is a new update. Use the following command (requires `sudo` privileges):
 
 ```bash
 sudo make
 ```
 
-#### Install the Utility
+#### 4. Install the Utility
 Complete the installation process **without requiring `sudo` or superuser privileges:**
 
 ```bash
 make install
 ```
 
-#### Post-Installation Setup
+#### 5. Post-Installation Setup
 After installation, the following will be ready to use:
 
 - **Utilities**: `discord-updater` and `discord-version-checker` are available system-wide.
 - **System Services**: A new `systemd` service and timer are configured to automate updates.
 - **Policy Setup**: A `polkit` action policy is created for secure update handling.
 
-#### Cleanup
+#### 6. Cleanup
 Once the installation is complete, you can safely remove the downloaded release file.
 
 ## Additional Configurations
