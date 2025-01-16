@@ -17,7 +17,7 @@ Additionally, a `systemd` service ensures that the script runs every time you lo
 
 This project requires the following utilities (_though they may already be installed on your system_):
 
-```console
+```bash
 sudo apt install curl jq make libnotify-bin
 ```
 
@@ -25,48 +25,51 @@ sudo apt install curl jq make libnotify-bin
 
 Follow these steps to install and configure the utility:
 
-**Download the Latest Release**
+#### Download the Latest Release
 Visit the [releases page](https://github.com/joseareia/discord-updater/releases) to download the most recent version of the utility.
 
-**Update Your `$PATH`**
+#### Update Your `$PATH`
 Add the installation directory to your `$PATH` by running the following commands in your terminal:
 
-```console
+```bash
 echo 'export PATH="$HOME/.discord-updater/bin/:$PATH"' >> $HOME/.bashrc
 source $HOME/.bashrc
 ```
 
-**System Configuration**
+#### System Configuration
 Configure your system and set up a policy to request a password each time there is a new update. Use the following command (requires `sudo` privileges):
 
-```console
+```bash
 sudo make
 ```
 
-**Install the Utility**
+#### Install the Utility
 Complete the installation process **without requiring `sudo` or superuser privileges:**
 
-```console
+```bash
 make install
 ```
 
-**Post-Installation Setup**
+#### Post-Installation Setup
 After installation, the following will be ready to use:
 
 - **Utilities**: `discord-updater` and `discord-version-checker` are available system-wide.
 - **System Services**: A new `systemd` service and timer are configured to automate updates.
 - **Policy Setup**: A `polkit` action policy is created for secure update handling.
 
-**Cleanup**
+#### Cleanup
 Once the installation is complete, you can safely remove the downloaded release file.
 
 ## Additional Configurations
 
 If you wish to modify the utility, edit the `discord-updater.sh` file, then follow the installation steps again.
 
+>[!TIP]
+>If you prefer not to be prompted to enter your password every time a new update is available, edit the `com.discord.updater.policy` file. Set both `allow_any` and `allow_inactive` to `yes`. After making these changes, run `sudo make` again.
+
 If you desire to unninstall the utility, you can simply run:
 
-```console
+```bash
 make uninstall
 ```
 This will remove the `discord-updater` utility, as well as the associated `systemd` service and timer.
