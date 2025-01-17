@@ -72,7 +72,7 @@ If you desire to unninstall the utility, you can simply run:
 ```bash
 make uninstall
 ```
-This will remove the `discord-updater` utility, as well as the associated `systemd` service and timer.
+This will remove the `discord-updater` utility, the `Polkit` policy, as well as the associated `systemd` service and timer.
 
 ## Getting Help
 If you have any questions, encounter issues, or need assistance, feel free to open an issue on this repository or contact me via email at <a href="mailto:jose.apareia@gmail.com">jose.apareia@gmail.com</a>.
