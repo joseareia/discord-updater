@@ -6,7 +6,7 @@ Wants=network-online.target
 
 [Timer]
 OnStartupSec=15s
-OnUnitActiveSec=1d
+OnUnitActiveSec=24hr
 Unit=discord-updater.service
 
 [Install]
